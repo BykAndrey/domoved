@@ -22,7 +22,7 @@
             <div class="slide">
 
                 {% endif %}
-				<div class="cover" style="	background-image: url({{ i.subcat.image.url }});">
+				<div class="cover" style="	background-image: url({{ i.subcat.image_large.url }});">
 
 				</div>
 				<div class="title">
@@ -55,7 +55,7 @@
 					{{ i.text }}
 				</div>
 				<div class="lookmore right">
-					<a href="{%  url 'Services' i.subcat.category.slug i.subcat.slug %}" alt="{{ i.subcat.name }}" >
+					<a href="{%  url 'Services' i.subcat.category.slug i.subcat.slug %}" alt="{{ i.subcat.name }}">
 						<h4>Подробнее</h4>
 
 					</a>

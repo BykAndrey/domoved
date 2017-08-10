@@ -30,12 +30,12 @@
 	<header >
 
 				<div class="headtopmenu">
-				<ul >
+				<ul>
 
 					<li><a href="{% url 'infopage' 'procedure-provision-serv'%}">Порядок оказания услуг</a></li>
 					<li><a href="{% url 'ListOpinion' %}">Отзывы</a></li>
 					<li><a href="{% url 'ListQuestions' %}">Ответы на вопросы</a></li>
-					<li class="town"><a href="#"><img src="" alt="">Москва</a></li>
+					<li class="town"><a href="#">Москва</a></li>
 				</ul>
 
 				</div>
@@ -67,11 +67,7 @@
 		<footer>
             <div class="info"><h5><a href="{% url 'ServiceCategoryList' %}">Услуги</a></h5>
 				<ul>
-					<!--<a href="#1"><li>Замена крыши</li></a>
-					<a href="#2"><li>Заливка фундамента</li></a>
-					<a href="#3"><li>Составление проекта дома</li></a>
-					<a href="#4"><li>Разработка проекта в AutoCAD </li></a>
-					<a href="#5"><li>Завершение строительсва</li></a>-->
+
 
                     {% footerListService %}
 				</ul>

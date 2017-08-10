@@ -143,9 +143,15 @@ header.px60 .logo{
     -moz-transition: all 1s; // Mozilla
     -o-transition: all 1s; // Opera
     transition: all 1s;
-
+	height: 60px!important;
 }
-
+header.px60 .logo>div{
+	height: 60px!important;
+	line-height: 50px!important;
+}
+ header.px60 .logo img{
+	 width: 50px;
+ }
 .container1200pxCenter{
 	width: 1200px;
 	margin: 0 auto 0  auto;
@@ -1222,3 +1228,29 @@ clip-path: polygon(50% 0, 100% 51%, 50% 100%, 40% 100%, 89% 51%, 40% 0);
                     margin: 45px;
                     text-align: center;
                 }
+
+
+quest{
+              background-color: #cfcfcf;
+            width: 750px;
+            border-bottom: 1px solid #e1e1e1;
+            margin: auto;
+
+        }
+        .quest>label{
+            padding: 5px 10px;
+
+        }
+        .quest>div{
+
+            display: none;
+            background-color: #e1e1e1;
+            text-align: justify;
+            padding: 10px;
+        }
+        .quest>.check{
+            display: none;
+        }
+        .quest>.check:checked ~ div{
+            display: block;
+        }
