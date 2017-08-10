@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load goodtags %}
+{% block 'metadate' %}
+    <meta name="description" content="Отзывы Компании ДомовеД">
+    <title>Отзывы Компании ДомовеД</title>
+{% endblock %}
+{% block 'content' %}
+    <div class="sectionIndex">
+    <div class="titleName">
+			<h2>Отзывы
+				<div class="linetitlename"></div>
+			</h2>
+
+			</div>
+        <div class="listing">
+        <div class="lookmore left">
+				<a href="/feedback/"><h4>Оставить свой отзыв</h4></a>
+			</div>
+        <br>
+            {% for i in opinions %}
+
+                {% opinionItem i forloop.counter0 %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

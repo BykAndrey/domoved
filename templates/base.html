@@ -1,0 +1,108 @@
+
+<!DOCTYPE HTML>
+{% load staticfiles %}
+{% load goodtags %}
+{% load servicetags %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static '/css/style2.css' %}">
+		<meta charset="utf-8">
+      <link rel="shortcut icon" type="image/png" href="{% static '/image/_1.ico' %}">
+        {% block 'metadate' %}
+
+        {% endblock %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+	</head>
+
+	<body>
+
+	<div class="buttotop">
+		<div>
+			Вверх!
+		</div>
+
+	</div>
+
+
+	<header >
+
+				<div class="headtopmenu">
+				<ul >
+
+					<li><a href="{% url 'infopage' 'procedure-provision-serv'%}">Порядок оказания услуг</a></li>
+					<li><a href="{% url 'ListOpinion' %}">Отзывы</a></li>
+					<li><a href="{% url 'ListQuestions' %}">Ответы на вопросы</a></li>
+					<li class="town"><a href="#"><img src="" alt="">Москва</a></li>
+				</ul>
+
+				</div>
+				<div class="headbotmenu">
+					<div class="logo">
+                       <div> <img src="{% static "/image/logo.png" %}" alt="66px"></div><div>ДомоВед.ru</div>
+					</div>
+					<div class="mainMenu">
+						<ul>
+							<li><a href="/">Главная</a></li>
+
+							<li><a href="{% url 'ServiceCategoryList' %}">Услуги</a></li>
+							<li><a href="/projects/">Проекты</a></li>
+							<li><a href="{% url 'infopage' 'aboutcompany' %}">О компании</a></li>
+							<li><a href="{% url 'infopage' 'contacts' %}">Контакты</a></li>
+							<li>+7 (926) 423 75 20</li>
+						</ul>
+					</div>
+				</div>
+
+		</header>
+    {% block 'slider' %}
+
+    {% endblock %}
+    	<div class="content container">
+            {% block 'content'%}
+            {%endblock%}
+        </div>
+		<footer>
+            <div class="info"><h5><a href="{% url 'ServiceCategoryList' %}">Услуги</a></h5>
+				<ul>
+					<!--<a href="#1"><li>Замена крыши</li></a>
+					<a href="#2"><li>Заливка фундамента</li></a>
+					<a href="#3"><li>Составление проекта дома</li></a>
+					<a href="#4"><li>Разработка проекта в AutoCAD </li></a>
+					<a href="#5"><li>Завершение строительсва</li></a>-->
+
+                    {% footerListService %}
+				</ul>
+			</div>
+			<div class="info"><h5><a href="{% url  'infopage' 'aboutcompany' %}">О компании</a> </h5>
+			<ul>
+				<a href="{% url 'infopage' 'procedure-provision-serv'%}"><li>Порядок оказания услуг</li></a>
+                <a href="{% url 'ListOpinion' %}"><li>Отзывы</li></a>
+                <a href="{% url 'ListQuestions' %}"><li>Ответы на вопросы</li></a>
+				</ul>
+				</div>
+			<div class="info"><h5><a href="{% url 'infopage' 'contacts' %}">Контакты</a></h5>
+			<ul>
+    	            <li>+7 (926) 423 75 20</li>
+	<li>+7 (925) 164 71 93</li>
+
+<li>+7 (916) 901 68 07</li>
+				</ul></div>
+			<div class="bottom"><h5>Социалные сети</h5>
+				<a href="#"><img src="{%  static '/image/vk.png'%}" width="20px" alt="Vk.com"></a>
+				<a href="#"><img src="{%  static '/image/ok.png'%}" width="20px" alt="Ok.com"></a>
+				<a href="#"><img src="{%  static '/image/inst.png'%}" width="20px" alt="instagram.com"></a>
+			</div>
+		</footer>
+		<script src="{%  static '/js/jquery.js'%}" type="text/javascript" charset="utf-8"></script>
+		<script src="{%  static '/js/script.js'%}" type="text/javascript" charset="utf-8" ></script>
+		<script src="{%  static '/js/slider.js'%}" type="text/javascript" charset="utf-8" ></script>
+        <script src="{%  static '/js/jquery.maskedinput.js'%}" type="text/javascript" charset="utf-8" ></script>
+		<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+	</body>
+</html>

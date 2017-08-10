@@ -1,0 +1,8 @@
+django
+python3.5
+Pillow
+whitenoise
+django-suit
+django-suit-redactor
+django-imagekit
+

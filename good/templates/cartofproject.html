@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block 'metadate' %}
+    <meta name="description" content="{{ project.title }} от Компании ДомовеД">
+    <title>{{ project.title }} от Компании ДомовеД</title>
+{% endblock %}
+{% block 'content' %}
+        	<div class="sectionIndex">
+		<div class="titleName">
+			<h1>{{ project.title }}
+				<div class="linetitlename"></div>
+			</h1>
+
+			</div>
+
+            <div class="listing">
+                <div class="about"> {{  project.description|safe}}</div>
+                 <br>
+                 <hr>
+                 <div class="photolist" style="float: inherit;margin: auto">
+
+                    <div class="display">
+
+                    </div>
+                    <div class="pointphoto">
+                            <hr>
+
+                        <div class="photo" style="background-image: url({{ project.image_large.url }})"></div>
+                        {% for i in images %}
+                            <div class="photo" style="background-image: url({{ i.image_large.url }})"></div>
+                        {% endfor %}
+                            <hr>
+
+
+                    </div>
+            </div>
+            </div>
+            </div>
+{% endblock %}

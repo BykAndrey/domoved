@@ -1,0 +1,74 @@
+<div class="slider container">
+            <input type="hidden" value="{{ count }}" id="count">
+			<div class="controls">
+
+				<div class="controlleft">
+
+				</div>
+				<div class="marks">
+                {% for i in slides %}
+					<div class="mark"></div>
+				{% endfor %}
+				</div>
+				<div class="controlright">
+
+				</div>
+
+			</div>
+    {% for i in slides %}
+        {% if forloop.first == True %}
+			<div class="slide active">
+            {% else %}
+            <div class="slide">
+
+                {% endif %}
+				<div class="cover" style="	background-image: url({{ i.subcat.image.url }});">
+
+				</div>
+				<div class="title">
+					{{ i.name }}
+				</div>
+				<div class="points">
+                     {% if i.prop1|length >= 5 %}
+					<div class="left-top point ">
+						{{ i.prop1 }}
+					</div>
+                    {% endif %}
+                 {% if i.prop2|length >= 5 %}
+					<div class="right point">
+						{{ i.prop2 }}
+					</div>
+
+                   {% endif %}
+                 {% if i.prop3|length >= 5 %}
+					<div class="left-bot point">
+						{{ i.prop3 }}
+					</div>
+                   {% endif %}
+                {% if i.prop4|length >= 5 %}
+					<div class="right point ">
+						{{ i.prop4 }}
+					</div>
+                   {% endif %}
+				</div>
+				<div class="description">
+					{{ i.text }}
+				</div>
+				<div class="lookmore right">
+					<a href="{%  url 'Services' i.subcat.category.slug i.subcat.slug %}" alt="{{ i.subcat.name }}" >
+						<h4>Подробнее</h4>
+
+					</a>
+				</div>
+			</div>
+{% endfor %}
+
+
+
+
+
+
+
+
+
+		</div>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block 'metadate' %}
+    <meta name="description" content="{{ page.metaDescription }}">
+      <title>{{ page.metaDescription }}</title>
+{% endblock %}
+{% block 'content' %}
+    <div class="sectionIndex">
+    <div class="titleName">
+        <h2>{{ page.title }}
+				<div class="linetitlename"></div>
+			</h2>
+    </div>
+    <div class="listing">
+        <div class="about">
+               {{ page.text|safe }}
+        </div>
+
+    </div>
+    </div>
+        {% endblock %}

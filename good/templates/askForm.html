@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block 'metadate' %}
+    <meta name="description" content="Задать вопрос в Компанию ДомовеД">
+    <title>Задать вопрос в Компанию ДомовеД</title>
+{% endblock %}
+{% block 'content' %}
+        <div class="sectionIndex">
+
+                <div class="titleName">
+			        <h2>Задайте свой вопрос
+				        <div class="linetitlename"></div>
+			        </h2>
+                </div>
+
+            <div class="listing">
+
+               <form action="" method="post">
+                    {% csrf_token %}
+
+				<div class="question">
+                    {{ form.name.errors }}
+                     {{ form.telephone.errors }}
+                    {{ form.email.errors }}
+                    {{ form.question.errors }}
+                    <div class="info">
+
+					{{ form.name.label_tag}}<br>
+					{{ form.name}}
+					</div>
+
+				<div class="info">
+
+					{{ form.telephone.label_tag}}<br>
+					{{ form.telephone}}
+					</div>
+				<div class="infoQuestion">
+
+					{{ form.email.label_tag}}<br>
+					{{ form.email}}
+					</div>
+				<div class="infoQuestion">
+
+					{{ form.question.label_tag}}<br>
+					<br>
+					{{ form.question}}
+					</div>
+				<input type="submit" value="Отправить">
+				</div>
+
+
+			</form>
+            </div>
+        </div>
+{% endblock %}

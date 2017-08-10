@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block 'metadate' %}
+    <meta name="description" content="Проекты Компании ДомовеД">
+    <title>Проекты Компании ДомовеД</title>
+{% endblock %}
+{% block 'content' %}
+{% load goodtags %}
+
+		<div class="sectionIndex">
+		<div class="titleName">
+			<h2>Наши проекты
+				<div class="linetitlename"></div>
+			</h2>
+
+			</div>
+            <div class="listing">
+
+            {% for a in list   %}
+                 {% goodItem a forloop.counter0 %}
+
+               {% endfor %}
+            </div>
+
+        </div>
+
+{% endblock%}

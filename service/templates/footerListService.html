@@ -1,0 +1,7 @@
+
+{% for i in category %}
+    <a href="{% url 'ServiceCategory' i.slug %}"><li>{{ i.name }}</li></a>
+{% endfor %}
+{% for i in subcategory %}
+    <a href="{% url 'Services' i.category.slug i.slug %}"><li>{{ i.name }}</li></a>
+{% endfor %}

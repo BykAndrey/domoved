@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+
+
+
+{% block 'metadate' %}
+    <meta name="description" content="Форма отзыва Компании ДомовеД">
+    <title>Форма отзыва Компании ДомовеД</title>
+{% endblock %}
+
+
+
+
+
+
+{% block 'content' %}
+    <div class="sectionIndex">
+   <div class="titleName">
+			<h2>Оставьте свой отзыв
+				<div class="linetitlename"></div>
+			</h2>
+
+			</div>
+            <div class="listing">
+
+            <div class="">
+
+                <form action="{% url 'feedback' %}" method="post">
+                    {% csrf_token %}
+                 <div class="question" style="border: none;box-shadow: none;">
+
+
+                        <div class="info" style="float: inherit">
+                           <div class="errors">{{ form.name.errors }}</div>
+                            {{ form.name.label_tag }}<br>{{ form.name }}
+                        </div>
+                      <div class="infoQuestion">
+                          <div class="errors">{{ form.email.errors }}</div>
+                            {{ form.email.label_tag }}<br>{{ form.email }}
+                        </div>
+
+                      <div class="infoQuestion">
+                         <div class="errors"> {{ form.opinion.errors }}</div>
+                            {{ form.opinion.label_tag }}<br>{{  form.opinion }}
+                        </div>
+                        <div class="infoQuestion">
+                         <div class="errors"> {{ form.image.errors }}</div>
+                            {{ form.image.label_tag }}<br>{{  form.image }}
+                        </div>
+<input type="submit" value="Отправить">
+
+                   </div>
+
+
+                </form>
+            </div>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load goodtags %}
+{% load slidertag %}
+
+
+{% block 'metadate' %}
+    <meta name="description" content="Строительная компания ДомовеД">
+    <title>Строительная компания ДомовеД</title>
+{% endblock %}
+
+
+
+{% block 'slider' %}
+    {% slider %}
+{% endblock %}
+            {% block 'content'%}
+                {% if   project is not None %}
+		<div class="sectionIndex">
+		<div class="titleName">
+			<h2>Наши проекты
+				<div class="linetitlename"></div>
+			</h2>
+
+			</div>
+		      <div class="listing">
+
+            {% for a in project   %}
+                 {% goodItem a forloop.counter0 %}
+
+               {% endfor %}
+            </div>
+			<div class="lookmore right">
+				<a href="{% url "ListProjects" %}" ><h4>Смотреть больше</h4></a>
+			</div>
+
+</div>
+
+
+{% endif %}
+
+{% if opinions is not None %}
+
+		<div class="sectionIndex">
+			<div class="titleName">
+			<h2>Отзывы
+				<div class="linetitlename"></div>
+			</h2>
+
+			</div>
+			<div class="listing">
+
+                {% for opin in opinions %}
+                    {% opinionItem opin forloop.counter0 %}
+                {% endfor %}
+
+
+            </div>
+            <div style="display: flex;">
+                 <div class="lookmore left">
+				<a href="{% url 'feedback' %}"><h4>Оставить свой отзыв</h4></a>
+			</div>
+		<div class="lookmore right">
+				<a href="{% url "ListOpinion" %}"><h4>Смотреть больше</h4></a>
+			</div>
+            </div>
+		</div>
+
+
+
+			</div>
+
+        </div>
+    </div>
+
+{% endif %}
+
+
+
+	<div class="sectionIndex">
+			<div class="titleName">
+			<h2>Задайте свой вопрос
+				<div class="linetitlename"></div>
+			</h2>
+
+
+
+
+			</div>
+<form action="{% url 'addquestion' %}" method="post">
+                {% csrf_token %}
+				<div class="question">
+                    <div class="info">
+					{{ askform.name.label_tag}}<br>
+					{{ askform.name}}
+					</div>
+
+				<div class="info">
+					{{ askform.telephone.label_tag}}<br>
+					{{ askform.telephone}}
+					</div>
+				<div class="infoQuestion">
+					{{ askform.email.label_tag}}<br>
+					{{ askform.email}}
+					</div>
+				<div class="infoQuestion">
+					{{ askform.question.label_tag}}<br>
+					<br>
+					{{ askform.question}}
+					</div>
+				<input type="submit" value="Отправить">
+				</div>
+
+
+			</form>
+    </div>
+{% endblock %}
+

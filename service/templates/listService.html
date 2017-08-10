@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block 'metadate' %}
+    <meta name="description" content="Услуги строительсва домов Компании ДомовеД в Москве">
+    <title>Услуги Компании ДомовеД</title>
+{% endblock %}
+{% block 'content' %}
+
+		<div class="sectionIndex">
+		<div class="titleName">
+			<h2>{{ title }}
+				<div class="linetitlename"></div>
+			</h2>
+
+			</div>
+            <style>
+
+            </style>
+            <div class="listing">
+            <div class="descript">
+
+                {% if basecat is not None %}
+
+                    {{ basecat.description }}
+                {% else %}
+
+                Мы предоставляем широкий спектр услуг в области строительных работ, таких как: строительство загородных домов, дачных домиков, гаражей,  бань и многое другое с использование самых передовых передовых
+                технологий и материалы проверенных временем.
+                {% endif %}
+            </div>
+            {% for i in category %}
+
+                <div class="usluga" style="background-image: url({{  i.image_small.url }})">
+    {% if basecat != None %}
+               <a href="{% url 'Services' basecat.slug i.slug %}">  <div class="name">{{ i.name }}</div></a>
+                    {% else %}
+                 <a href="{% url 'ServiceCategory' i.slug %}">  <div class="name">{{ i.name }}</div></a>
+                {% endif %}
+                </div>
+            {% endfor %}
+            {% for i in subcategory %}
+                <div class="usluga" style="background-image: url({{  i.image_small.url }})">
+
+               <a href="{% url 'Services' i.category.slug i.slug %}">  <div class="name">{{ i.name }}</div></a>
+                </div>
+            {% endfor %}
+
+
+
+
+            </div>
+
+        </div>
+
+{% endblock %}

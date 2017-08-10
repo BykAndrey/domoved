@@ -1,0 +1,14 @@
+
+<div class="otzyvItem {{ side }}">
+    {% if opinion.image.url != null %}
+				<div class="PhotoMan" style="background-image: url({{ opinion.image_small.url }});">
+
+				</div>
+    {% endif %}
+				<div class="description">
+					<p class="otzyvName">{{ opinion.name }}</p>
+					<p class="otzyvText">
+                        {{ opinion.opinion }}
+                    </p>
+				</div>
+			</div>

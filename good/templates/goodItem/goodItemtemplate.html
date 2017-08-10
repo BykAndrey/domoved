@@ -1,0 +1,10 @@
+{% load staticfiles %}
+<div class="projectItem {{ side }}">
+				<div class="imageproject">
+					<img src="{{ good.image_small.url }}" alt="" width="220px" height="160px">
+				</div>
+				<div class="description">
+					<h3><a href="/projects/{{ good.slug }}/">{{ good.title }}</a></h3>
+					<p>{{ good.description|safe }}</p>
+				</div>
+			</div>
