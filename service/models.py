@@ -45,7 +45,7 @@ class Category(BaseCategory):
     def __str__(self):
         return self.name
     def save(self, *args,**kwargs):
-        self.slug = slugify(self.name+self.id)
+        self.slug = slugify(self.name)
 
         super(Category,self).save(*args,**kwargs)
 
@@ -72,7 +72,7 @@ class SubCategory(BaseCategory):
     def __str__(self):
         return self.name
     def save(self, *args,**kwargs):
-        self.slug = slugify(self.name + self.id)
+        self.slug = slugify(self.name)
         super(SubCategory,self).save(*args,**kwargs)
 
 class Material(models.Model):
