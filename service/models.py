@@ -18,7 +18,7 @@ class BaseCategory(models.Model):
         keywords = models.CharField(max_length=180, blank=True, null=True)
         boolShowOnMain = models.BooleanField(default=False, verbose_name="Публиковать вместе с категориями")
 
-        slug = models.CharField(unique=True, default=' ',max_length=200, blank=True)
+        slug = models.CharField(unique=True, default=' ',max_length=200)
 
         class Meta:
             abstract = True
