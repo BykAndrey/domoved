@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /static/*
+Allow: /media/*
+
+User-agent: Yandex
+Allow: /static/*
+Host: bykandrey2.pythonanywhere.com
