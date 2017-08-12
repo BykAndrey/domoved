@@ -63,9 +63,7 @@ class SubCategoryAdmin(admin.ModelAdmin):
     ]
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    prepopulated_fields = {
-        'slug': ('name',),
-    }
+    prepopulated_fields = {'slug': ('name',),}
 
 admin.site.register(SubCategory,SubCategoryAdmin)
 admin.site.register(Service)
