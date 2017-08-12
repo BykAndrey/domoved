@@ -103,3 +103,6 @@ def infopage(request,url):
    args['page']=AboutSite.objects.filter(url=url).first()
 
    return  render_to_response('InfoPage.html',args)
+
+def robot(request):
+   return  render_to_response("robot.txt",  content_type='text/plain')

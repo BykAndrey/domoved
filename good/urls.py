@@ -32,7 +32,8 @@ urlpatterns = [
     url(r'^feedback/$',getOpinion,name="feedback"),
     url(r'^question/add/$',AddQuestion,name="addquestion"),
     url(r'^questions/$',listquestions,name="ListQuestions"),
-    url(r'^info/(?P<url>[-\w]+)/$',infopage,name="infopage")
+    url(r'^info/(?P<url>[-\w]+)/$',infopage,name="infopage"),
+    url(r'^robot.txt$',robot)
 
 ]
 if settings.DEBUG:
