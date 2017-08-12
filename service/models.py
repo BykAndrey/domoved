@@ -15,9 +15,10 @@ class BaseCategory(models.Model):
         name = models.CharField(default="Название категории/услуги", max_length=50, verbose_name="Название категории/услуги")
         boolVisible = models.BooleanField(default=False, verbose_name="Опубликовать")
         metaDescription = models.CharField(default="Категория", max_length=50, verbose_name="meta Description")
+        keywords = models.CharField(max_length=180, blank=True, null=True)
         boolShowOnMain = models.BooleanField(default=False, verbose_name="Публиковать вместе с категориями")
 
-        slug = models.CharField(unique=True, default='',max_length=200)
+        slug = models.CharField(unique=True, default=' ',max_length=200, blank=True)
 
         class Meta:
             abstract = True
@@ -43,6 +44,10 @@ class Category(BaseCategory):
 
     def __str__(self):
         return self.name
+    def save(self, *args,**kwargs):
+        self.slug = slugify(self.name+self.id)
+
+        super(Category,self).save(*args,**kwargs)
 
 
 class SubCategory(BaseCategory):
@@ -66,7 +71,9 @@ class SubCategory(BaseCategory):
 
     def __str__(self):
         return self.name
-
+    def save(self, *args,**kwargs):
+        self.slug = slugify(self.name + self.id)
+        super(SubCategory,self).save(*args,**kwargs)
 
 class Material(models.Model):
     name = models.CharField(default="Материал", max_length=50, verbose_name="Материал")

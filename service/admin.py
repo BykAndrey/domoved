@@ -35,8 +35,12 @@ class SubCategoryAdmin(admin.ModelAdmin):
     form=SubCategoryForm
     inlines = [ServiceTab,ImagesSubStacked]
     list_display = ['name']
-    prepopulated_fields = {"slug": ("name",)}
+    prepopulated_fields = {
+        'slug': ('name',),
+    }
+
     suit_classes='suit-tab suit-tab-general'
+
     suit_form_tabs=(('general','Категория'),
                     ('service','Услуги'),
                     ('images','Изображения'))
@@ -46,8 +50,8 @@ class SubCategoryAdmin(admin.ModelAdmin):
             'fields': [
                 'category',
                 'name',
-
                 'metaDescription',
+                'keywords',
                 'description',
                 'slug',
                 'image',
@@ -59,7 +63,9 @@ class SubCategoryAdmin(admin.ModelAdmin):
     ]
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"slug": ("name",)}
+    prepopulated_fields = {
+        'slug': ('name',),
+    }
 
 admin.site.register(SubCategory,SubCategoryAdmin)
 admin.site.register(Service)

@@ -22,6 +22,7 @@ def make_upload_path(instance, filename, prefix=False):
 class Project(models.Model):
     title = models.CharField(max_length=180, default="Название проекта", verbose_name="Название")
     metadescription = models.CharField(max_length=180, verbose_name="Meta description", default="def")
+    keywords=models.CharField(max_length=180, blank=True,null=True)
     date = models.DateTimeField(auto_now_add=True)
     description = models.TextField(default="Описание", verbose_name="Описание")
     image=models.ImageField(upload_to=make_upload_path,
@@ -114,6 +115,7 @@ class AboutSite(models.Model):
         title=models.CharField(verbose_name="Title", default="Title", max_length=180)
         url=models.CharField(verbose_name="URL",default="aboutcompany",max_length=25)
         metaDescription=models.CharField(default="Title", max_length=180)
+        keywords = models.CharField(max_length=180, blank=True, null=True)
         text=models.TextField(default=" ",verbose_name="Текст")
         class Meta:
             verbose_name="Page"

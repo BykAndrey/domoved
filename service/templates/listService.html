@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% block 'metadate' %}
     <meta name="description" content="Услуги строительсва домов Компании ДомовеД в Москве">
+      {% if basecat is not None %}
+
+                      <meta name="keywords" content="{{ basecat.keywords }}"/>
+                {% else %}
+
+                  <meta name="keywords" content="Услуги строительсва в москве, строительсво дома в москве, построить дом в москве"/>
+                {% endif %}
+
     <title>Услуги Компании ДомовеД</title>
 {% endblock %}
 {% block 'content' %}
