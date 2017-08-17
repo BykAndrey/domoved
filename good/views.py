@@ -105,7 +105,7 @@ def infopage(request,url):
    return  render_to_response('InfoPage.html',args)
 
 def robot(request):
-   return  render_to_response("robot.txt",  content_type='text/plain')
+   return  render_to_response("robots.txt",  content_type='text/plain')
 
 def sitemap(request):
    return  render_to_response("sitemap.xml",  content_type='text/plain')
