@@ -67,7 +67,7 @@ class SubCategory(BaseCategory):
 
     def __str__(self):
         return self.name
-  
+
 
 class Material(models.Model):
     name = models.CharField(default="Материал", max_length=50, verbose_name="Материал")
