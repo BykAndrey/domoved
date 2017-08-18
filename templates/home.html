@@ -14,7 +14,11 @@
 {% block 'slider' %}
     {% slider %}
 {% endblock %}
-            {% block 'content'%}
+
+
+
+
+{% block 'content'%}
                 {% if   project is not None %}
 		<div class="sectionIndex">
 		<div class="titleName">
@@ -64,14 +68,14 @@
 				<a href="{% url "ListOpinion" %}"><h4>Смотреть больше</h4></a>
 			</div>
             </div>
-		</div>
+
 
 
 
 			</div>
 
-        </div>
-    </div>
+
+
 
 {% endif %}
 
