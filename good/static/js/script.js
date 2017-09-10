@@ -1,7 +1,12 @@
 $(document).ready(function(){
+	$('.complectation > .content').css('height',$(window).height()-120);
+
+	$('.complectation>.content>.text').css('height',$(window).height()-120-40);
+
+
 	$(window).scroll(function() {
 		console.log($(window).scrollTop());
-		if($(window).scrollTop()>570){
+		if($(window).scrollTop()>50){
 
 			$('header').addClass('px60');
 			$('.buttotop').css('display','block');
@@ -20,14 +25,14 @@ $(document).ready(function(){
 
 
 	$('.moreCost:first-child').css('display','block');
-	$('span.material:first-child').addClass('active');
-    $('span.material').click(function (env) {
+	$('div.material:first-child').addClass('active');
+    $('div.material').click(function (env) {
 		$('.moreCost').each(function () {
 			$(this).css('display','none');
 
 
         });
-		$('span.material').each(function () {
+		$('div.material').each(function () {
 			$(this).removeClass('active');
         });
 

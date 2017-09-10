@@ -28,3 +28,14 @@ def opinionItem(opinion,side):
 
 
     return {'opinion':opinion,'side':gside}
+
+
+@register.inclusion_tag('breadcrops.html')
+def breadcrops(listing):
+    url=''
+    for cr in listing:
+        url=url+'/'+cr[1]
+        cr[1]=url
+    crops=listing
+    leng=len(crops)
+    return {'crops':crops,'leng':leng}

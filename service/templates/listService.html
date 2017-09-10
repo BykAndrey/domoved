@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load goodtags %}
 {% block 'metadate' %}
     <meta name="description" content="Услуги строительсва домов Компании ДомовеД в Москве">
       {% if basecat is not None %}
@@ -12,7 +13,7 @@
     <title>Услуги Компании ДомовеД</title>
 {% endblock %}
 {% block 'content' %}
-
+  
 		<div class="sectionIndex">
 		<div class="titleName">
 			<h2>{{ title }}

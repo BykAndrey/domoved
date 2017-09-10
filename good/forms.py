@@ -1,7 +1,11 @@
 from django import forms
 from .models import Opinion,Question
 
-class leaveOpinionForm(forms.ModelForm):
+class leaveOpinionForm(forms.Form):
+    name=forms.CharField(label='ФИО', max_length=40)
+    email=forms.EmailField()
+    opinion=forms.CharField(label='Отзыв',max_length=150)
+    image = forms.ImageField(label='Картинка')
     class Meta:
         model=Opinion
         fields=['name','email','opinion','image']

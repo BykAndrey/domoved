@@ -26,7 +26,7 @@
 
             <div class="">
 
-                <form action="{% url 'feedback' %}" method="post">
+                <form  enctype="multipart/form-data" action="{% url 'feedback' %}" method="post">
                     {% csrf_token %}
                  <div class="question" style="border: none;box-shadow: none;">
 
@@ -43,11 +43,14 @@
                       <div class="infoQuestion">
                          <div class="errors"> {{ form.opinion.errors }}</div>
                             {{ form.opinion.label_tag }}<br>{{  form.opinion }}
+                        <!--    <textarea name="opinion" id="id_opinion" maxlength="150" row=5></textarea>-->
+
                         </div>
                         <div class="infoQuestion">
                          <div class="errors"> {{ form.image.errors }}</div>
                             {{ form.image.label_tag }}<br>{{  form.image }}
                         </div>
+
 <input type="submit" value="Отправить">
 
                    </div>

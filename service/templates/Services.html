@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+{% load goodtags %}
 {% block 'metadate' %}
     <meta name="description" content="{{ title }} от Компании ДомовеД в Москве">
     <meta name="keywords" content="{{ subcat.keywords }}"/>
     <title>"{{ title }} от Компании ДомовеД</title>
 {% endblock %}
 {% block 'content' %}
+
   <div class="sectionIndex">
 
     <div class="titleName">
@@ -29,7 +32,7 @@
 <div class="listing">
 
         <div class="photolist">
-            <div class="display">
+          <!-- <div class="display">
 
             </div>
             <div class="pointphoto">
@@ -39,17 +42,63 @@
                 <div class="photo" style="background-image: url({{ i.image_large.url }})"></div>
             {% endfor %}
                 <hr>
-            </div>
+            </div>-->
+            <!-- Slider-->
+               <div class="galery">
+
+                   <!--display-->
+                   <div class="display">
+                     <div class="slide">
+                       <div class="image" style="background-image: url({{ subcat.image_large.url }})"></div>
+                       <!--<div class="text">
+                         <h2>Действительно низкие цены!</h2>
+                         <p>Торопитесь купить любимые духи со скидкой до 10%</p>
+                       </div>-->
+                     </div>
+                     {% for i in images %}
+                     <div class="slide">
+                       <div class="image" style="background-image: url({{ i.image_large.url }})"></div>
+                       <!--<div class="text">
+                         <h2>Действительно низкие цены!</h2>
+                         <p>Торопитесь купить любимые духи со скидкой до 10%</p>
+                       </div>-->
+                     </div>
+                       {% endfor %}
+
+                   </div>
+                   <!--End display-->
+
+                   <!--Controls-->
+                   <div class="controls">
+                     <div class="marks">
+                       <div class="mark"></div>
+                        {% for i in images %}
+                       <div class="mark"></div>
+                          {% endfor %}
+                     </div>
+                     <div class="buttons">
+                       <div class="left"><img src="{% static '/image/arrow.png' %}" width="70px" height="70px"></div>
+                       <div class="right"><img src="{% static '/image/arrow.png' %}" width="70px" height="70px"></div>
+                     </div>
+                   </div>
+                   <!--/*End controls*/-->
+
+               </div>
+               <!--End Slider-->
+
         </div>
         <div class="date">
-            <div class="variantname">Варианты изготовления:</div>  <br>
+            <div class="variantname">Варианты изготовления:</div>
 
 
         <div class="variants">
             {% for i in services %}
 
 
-               <span class="material" for="{{ i.slug }}">{{ i.material.name }}</span>
+               <div class="material" for="{{ i.slug }}">
+                 <img src="{{i.material.image.url}}" width='50px' title="{{ i.material.name }}" alt="{{ i.material.name }}"/>
+                 <div>{{ i.material.name }}</div>
+               </div>
 
 
         {% endfor %}
@@ -58,12 +107,12 @@
         <div class="cost">
              {% for i in services %}
            <div class="moreCost" id="{{ i.slug }}">
-              <span class="duration">
-          <hr>  Сроки выполнения:<br>    <span>  {{ i.duration }}</span>
-              </span>
-<br>
-               <span><hr>Стоимость от:<br>
-                   <span class="price"><i>{{ i.price }} </i>р.</span>/{{ i.priceunit.name }}</span>  <hr>
+              <div class="duration">
+        <span>  Сроки выполнения: </span>
+          <div>  {{ i.duration }}</div>
+        </div>
+     <span><hr>Стоимость от:<br>
+                   <div class="price"><i>{{ i.price }} </i>р.</div> {{ i.priceunit.name }}</span>  <hr>
            </div>
 
         {% endfor %}

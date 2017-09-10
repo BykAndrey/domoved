@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block 'metadate' %}
     <meta name="description" content="{{ project.title }} от Компании ДомовеД">
     <title>{{ project.title }} от Компании ДомовеД</title>
@@ -17,7 +18,7 @@
                  <br>
                  <hr>
                  <div class="photolist" style="float: inherit;margin: auto">
-
+<!--
                     <div class="display">
 
                     </div>
@@ -31,7 +32,42 @@
                             <hr>
 
 
+                    </div>-->
+                    <div class="galery">
+
+                        <!--display-->
+                        <div class="display">
+                          <div class="slide">
+                            <div class="image" style="background-image: url({{ project.image_large.url }})"></div>
+
+                          </div>
+                          {% for i in images %}
+                          <div class="slide">
+                            <div class="image" style="background-image: url({{ i.image_large.url }})"></div>
+
+                          </div>
+                            {% endfor %}
+
+                        </div>
+                        <!--End display-->
+
+                        <!--Controls-->
+                        <div class="controls">
+                          <div class="marks">
+                            <div class="mark"></div>
+                             {% for i in images %}
+                            <div class="mark"></div>
+                               {% endfor %}
+                          </div>
+                          <div class="buttons">
+                            <div class="left"><img src="{% static '/image/arrow.png' %}" width="70px" height="70px"></div>
+                            <div class="right"><img src="{% static '/image/arrow.png' %}" width="70px" height="70px"></div>
+                          </div>
+                        </div>
+                        <!--/*End controls*/-->
+
                     </div>
+                    <!--End Slider-->
             </div>
             </div>
             </div>

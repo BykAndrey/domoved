@@ -24,8 +24,9 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('good.urls')),
+
     url(r'^service/',include('service.urls')),
+    url(r'^', include('good.urls')),
     url(r'^$', home),
 
 ]

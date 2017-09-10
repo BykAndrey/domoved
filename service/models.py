@@ -71,6 +71,10 @@ class SubCategory(BaseCategory):
 
 class Material(models.Model):
     name = models.CharField(default="Материал", max_length=50, verbose_name="Материал")
+    image = models.ImageField(upload_to=make_upload_path,
+                              blank=True,
+                              default='',
+                              verbose_name="Картинка")
     class Meta:
         verbose_name="Материал"
         verbose_name_plural="Материалы"
@@ -102,8 +106,6 @@ class Service(BaseCategory):
 
     def __str__(self):
         return self.name
-
-
     def save(self, *args,**kwargs):
         self.slug=slugify(self.name)
         super(Service, self).save(*args,**kwargs)

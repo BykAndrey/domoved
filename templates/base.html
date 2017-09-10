@@ -41,7 +41,7 @@
 				</div>
 				<div class="headbotmenu">
 					<div class="logo">
-                       <div> <img src="{% static "/image/logo.png" %}" alt="66px"></div><div>ДомоВед.ru</div>
+                       <div> <img src="{% static "/image/logo.png" %}" alt="66px"></div><div>СК Домовед</div>
 					</div>
 					<div class="mainMenu">
 						<ul>
@@ -61,6 +61,7 @@
 
     {% endblock %}
     	<div class="content container">
+				  {%breadcrops Crops%}
             {% block 'content'%}
             {% endblock %}
         </div>
@@ -95,10 +96,9 @@
 		<script src="{%  static '/js/jquery.js'%}" type="text/javascript" charset="utf-8"></script>
 		<script src="{%  static '/js/script.js'%}" type="text/javascript" charset="utf-8" ></script>
 		<script src="{%  static '/js/slider.js'%}" type="text/javascript" charset="utf-8" ></script>
-        <script src="{%  static '/js/jquery.maskedinput.js'%}" type="text/javascript" charset="utf-8" ></script>
-		<script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
-//]]></script>
+		<script src="{%  static '/js/sliderServ.js'%}" type="text/javascript" charset="utf-8" ></script>
+    <script src="{%  static '/js/jquery.maskedinput.js'%}" type="text/javascript" charset="utf-8" ></script>
+
 
 	</body>
 </html>

@@ -1,0 +1,12 @@
+<div class="breadcrops">
+  <ul>
+    {% if leng%}
+      <li><a href="/">Главная</a> / </li>
+    {%endif%}
+
+    {%for crops in crops%}
+
+      <li><a href="{{crops.1}}/">{{crops.0}}</a> / </li>
+    {%endfor%}
+  </ul>
+</div>

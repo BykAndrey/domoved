@@ -32,7 +32,7 @@ urlpatterns = [
     url(r'^feedback/$',getOpinion,name="feedback"),
     url(r'^question/add/$',AddQuestion,name="addquestion"),
     url(r'^questions/$',listquestions,name="ListQuestions"),
-    url(r'^info/(?P<url>[-\w]+)/$',infopage,name="infopage"),
+    url(r'^(?P<url>[-\w]+)/$',infopage,name="infopage"),
     url(r'^robots\.txt$', robot),
     url(r'^sitemap\.xml$', sitemap),
     url(r'^google8e590507aa68c203\.html$',google),
