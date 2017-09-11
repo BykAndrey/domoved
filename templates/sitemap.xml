@@ -3,87 +3,87 @@
 		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/</loc>
-	<lastmod>2017-08-17T11:45:02+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:12+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://bykandrey2.pythonanywhere.com/info/procedure-provision-serv/</loc>
-	<lastmod>2017-08-17T11:45:03+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>http://bykandrey2.pythonanywhere.com/procedure-provision-serv/</loc>
+	<lastmod>2017-09-11T18:07:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/opinions/</loc>
-	<lastmod>2017-08-17T11:45:04+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:15+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/questions/</loc>
-	<lastmod>2017-08-17T11:45:04+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:15+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/service/</loc>
-	<lastmod>2017-08-17T11:45:05+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:16+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/projects/</loc>
-	<lastmod>2017-08-17T11:45:06+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:17+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://bykandrey2.pythonanywhere.com/info/aboutcompany/</loc>
-	<lastmod>2017-08-17T11:45:06+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>http://bykandrey2.pythonanywhere.com/aboutcompany/</loc>
+	<lastmod>2017-09-11T18:07:17+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://bykandrey2.pythonanywhere.com/info/contacts/</loc>
-	<lastmod>2017-08-17T11:45:07+01:00</lastmod>
-	<priority>0.6</priority>
+	<loc>http://bykandrey2.pythonanywhere.com/contacts/</loc>
+	<lastmod>2017-09-11T18:07:18+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/service/kottedzhi/seriya-kottedzhej-fin/</loc>
-	<lastmod>2017-08-17T11:45:08+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:19+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/service/kottedzhi/zagorodnyj-dom-4h5/</loc>
-	<lastmod>2017-08-17T11:45:08+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:25+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/projects/karkasnyj-dom/</loc>
-	<lastmod>2017-08-17T11:45:09+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:25+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/feedback/</loc>
-	<lastmod>2017-08-17T11:45:10+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:26+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/service/kottedzhi/</loc>
-	<lastmod>2017-08-17T11:45:11+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:28+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/service/garazhi/</loc>
-	<lastmod>2017-08-17T11:45:12+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:28+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/service/hozpostrojki/</loc>
-	<lastmod>2017-08-17T11:45:13+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:28+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/service/razovye-raboty/ustanovka-osvesheniya-na-terasse/</loc>
-	<lastmod>2017-08-17T11:45:13+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:30+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
 	<loc>http://bykandrey2.pythonanywhere.com/question/add/</loc>
-	<lastmod>2017-08-17T11:45:14+01:00</lastmod>
+	<lastmod>2017-09-11T18:07:30+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 </urlset>
