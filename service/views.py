@@ -20,7 +20,8 @@ def CategoryService(request, url):
     main=Category.objects.filter(boolVisible=True,slug=url).first()
     if main==None:
         return redirect('/service')
-    args['title'] = main.name
+    args['title']=main.title
+    args['namePage'] = main.name
     args['basecat']=main
     args['category']=SubCategory.objects.filter(boolVisible=True,category=main)
     args['subcategory']=None
@@ -36,10 +37,11 @@ def Services(requeste,url,suburl):
     subcat=SubCategory.objects.filter(slug=suburl).first()
     cat=subcat.category
     if subcat is not None:
+        args['title']=subcat.title
         args['subcat']=subcat
         args['services']=Service.objects.filter(category=subcat)
         args['images']=ImagesSub.objects.filter(category=subcat)
-        args['title'] = subcat.name
+        args['namePage'] = subcat.name
         args['Crops']=[['Услуги','service'],[cat.name,cat.slug],[subcat.name,subcat.slug]]
     else:
         args['title'] = "Извините, запрошенный адресс не существует"

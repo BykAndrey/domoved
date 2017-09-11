@@ -3,7 +3,7 @@ from django.utils.text import slugify
 from PIL import Image
 from imagekit.models.fields import ImageSpecField
 from imagekit.processors import ResizeToFit, Adjust,ResizeToFill
-
+from random import randint
 from good.models import make_upload_path
 # Create your models here.
 
@@ -13,6 +13,7 @@ from good.models import make_upload_path
 
 class BaseCategory(models.Model):
         name = models.CharField(default="Название категории/услуги", max_length=50, verbose_name="Название категории/услуги")
+        title= models.CharField(default="Заголовок страницы!", max_length=80,verbose_name="Title")
         boolVisible = models.BooleanField(default=False, verbose_name="Опубликовать")
         metaDescription = models.CharField(default="Категория", max_length=50, verbose_name="meta Description")
         keywords = models.CharField(max_length=180, blank=True, null=True)
@@ -111,7 +112,8 @@ class Service(BaseCategory):
     def __str__(self):
         return self.name
     def save(self, *args,**kwargs):
-        self.slug=slugify(self.name)
+        ran=randint(1000,9999)
+        self.slug=slugify(self.name)+'-'+str(ran)
         super(Service, self).save(*args,**kwargs)
 
 

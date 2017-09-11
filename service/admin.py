@@ -50,6 +50,7 @@ class SubCategoryAdmin(admin.ModelAdmin):
             'fields': [
                 'category',
                 'name',
+                'title',
                 'metaDescription',
                 'keywords',
                 'description',
