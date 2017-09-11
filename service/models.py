@@ -57,10 +57,14 @@ class SubCategory(BaseCategory):
                                  processors=[ResizeToFill(250, 250)],
                                  format='JPEG',
                                  options={'quality': 60})
+    image_middle = ImageSpecField(source='image',
+                                 processors=[ResizeToFill(660, 500)],
+                                 format='JPEG',
+                                 options={'quality': 100})
     image_large = ImageSpecField(source='image',
                                  processors=[ResizeToFill(840, 500)],
                                  format='JPEG',
-                                 options={'quality': 60})
+                                 options={'quality': 70})
     class Meta:
         verbose_name="Подкатегория"
         verbose_name_plural="Подкатегории"
